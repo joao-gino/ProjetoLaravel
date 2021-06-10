@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('clientes.index');
+    return redirect()->route('clientes.index');
 });
 
 Route::get('produtos', function () {
@@ -24,6 +24,10 @@ Route::get('produtos', function () {
 Route::get('departamentos', function () {
     return view('outras.departamentos');
 })->name('departamentos');
+
+Route::get('opcoes/{opcao?}', function ($opcao = null) {
+    return view('outras.opcoes', compact(['opcao']));
+})->name('opcoes');
 
 // Route::get('nome', 'MeuControlador@getNome');
 // Route::get('idade', 'MeuControlador@getIdade');

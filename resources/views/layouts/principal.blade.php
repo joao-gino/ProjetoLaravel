@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Clientes</title>
+    <title>@yield('titulo')</title>
     <link rel="stylesheet" href="{{ asset('css/principal.css') }}">
 </head>
 <body>
@@ -18,6 +18,8 @@
                         href="{{ route('produtos') }}">Produtos</a></li>
                     <li><a class="{{request()->routeIs('departamentos') ? 'active' : ''}}"
                         href="{{ route('departamentos') }}">Departamentos</a></li>
+                    <li><a class="{{request()->routeIs('opcoes') ? 'active' : ''}}"
+                        href="{{ route('opcoes') }}">Opções</a></li>
                 </ul>
             </div>
         </div>
