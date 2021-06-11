@@ -6,10 +6,14 @@
 
     <div class="options">
         <ul>
-            <li><a class="warning" href="{{ route('opcoes', 1) }}">warning</a></li>
-            <li><a class="info"    href="{{ route('opcoes', 2) }}">info</a></li>
-            <li><a class="success" href="{{ route('opcoes', 3) }}">success</a></li>
-            <li><a class="error"   href="{{ route('opcoes', 4) }}">error</a></li>
+            <li><a class="{{request()->is('opcoes/1') ? 'selected warning' : 'warning'}}" 
+                href="{{ route('opcoes', 1) }}">warning</a></li>
+            <li><a class="{{request()->is('opcoes/2') ? 'selected info' : 'info'}}" 
+                href="{{ route('opcoes', 2) }}">info</a></li>
+            <li><a class="{{request()->is('opcoes/3') ? 'selected success' : 'success'}}" 
+                href="{{ route('opcoes', 3) }}">success</a></li>
+            <li><a class="{{request()->is('opcoes/4') ? 'selected error' : 'error'}}" 
+                href="{{ route('opcoes', 4) }}">error</a></li>
         </ul>
     </div>
 
